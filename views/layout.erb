@@ -3,9 +3,21 @@
 <html>
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>..::LoGYoUrDrEaM::..</title>
+		<title>LogYourDream.com | Coming Soon</title>
+		<link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" title="master" charset="utf-8">
+		<link rel="stylesheet" href="/css/sIFT-screen.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="/css/sIFT-print.css" type="text/css" media="printer" charset="utf-8">
 	</head>
-	<body id="mypage" onload="">
-		<h1>Se viene se viene</h1>
+	<body>
+		<%= yield %>
 	</body>
+	<script type="text/javascript" charset="utf-8" src="/scripts/sifr.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/scripts/sifr-addons.js"></script>	
+	<script type="text/javascript" charset="utf-8" src="/script/jquery.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/script/jquery.corners.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$('#announcement').corners('10px 10px');
+		});
+	</script>
 </html>
