@@ -10,14 +10,20 @@
 	</head>
 	<body>
 		<%= yield %>
-	</body>
-	<script type="text/javascript" charset="utf-8" src="/scripts/sifr.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/scripts/sifr-addons.js"></script>	
+	</body>	
 	<script type="text/javascript" charset="utf-8" src="/script/jquery.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/script/jquery.corners.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/script/jquery.curvycorners.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
-		$(document).ready(function(){
-			$('#announcement').corners('10px 10px');
-		});
+	$(document).ready(function() {
+		var settings = {
+							tl: { radius: 10 },
+							tr: { radius: 10 },
+							bl: { radius: 10 },
+							br: { radius: 10 },
+							antiAlias: true
+						}
+
+		curvyCorners(settings, $("#announcement").get(0));
+	});
 	</script>
 </html>

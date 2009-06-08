@@ -9,15 +9,16 @@ div#announcement
 	background: url(/img/bkg.png) repeat top left transparent;
 	margin: 150px auto 0px auto;
 	width: 764px;
-	padding: 40px 40px 40px 40px;
+	padding: 0px 40px 45px 40px;
 	color: #111;
+	height: 200px;
 }
 
 div#announcement h1
 {
-	background: url(/img/title.png) no-repeat top left;
+	background: url(/img/title.png) no-repeat bottom left;
 	text-indent: -9999px;
-	padding: 0px 0px 25px 0px;
+	padding: 48px 0px 25px 0px;
 }
 
 div#announcement h2
