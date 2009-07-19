@@ -1,3 +1,3 @@
 require 'application'
+run DataMapper.auto_upgrade!
 run Sinatra::Application
-DataMapper.auto_upgrade!
