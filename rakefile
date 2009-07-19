@@ -1,13 +1,15 @@
-require 'rake'
-require 'spec/rake/spectask'
-
 namespace :ci do
-	desc "Run all examples with RCov"
-	Spec::Rake::SpecTask.new('examples_with_rcov') do |t|
-	  t.spec_files = FileList['./test/*.rb']
-	  t.rcov = true
-	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
-	  t.spec_opts = ['-cfn']
-	end
+  desc 'default task it;s doing nothing'
+  task :default do
+	p 'this is the default task'
+  end
+  
+  desc 'Measures test coverage'
+  task :coverage do
+    rm_f "./tmp/coverage"
+    rm_f "coverage.data"
+    rcov = "rcov --rails --aggregate coverage.data --text-summary -Ilib"
+    system("#{rcov} --no-html ./test/*.test.rb")
+    system("open coverage/index.html") if PLATFORM['darwin']
+  end
 end
-
