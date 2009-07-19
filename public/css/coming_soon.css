@@ -1,0 +1,31 @@
+body
+{
+	background: #efefef url(/img/background.jpg) repeat fixed top;
+	font: normal normal normal 1em Helvetica, Verdana, sans-serif;
+}
+
+div#announcement
+{
+	background: url(/img/bkg.png) repeat top left transparent;
+	margin: 150px auto 0px auto;
+	width: 764px;
+	padding: 0px 40px 45px 40px;
+	color: #111;
+	height: 200px;
+}
+
+div#announcement h1
+{
+	background: url(/img/title.png) no-repeat bottom left;
+	text-indent: -9999px;
+	padding: 48px 0px 25px 0px;
+}
+
+div#announcement h2
+{
+	padding: 0px 0px 20px 0px;
+	font-size: 1.6em;
+	color: #b0b0b0;
+	font-weight: normal;
+	letter-spacing: 0.09em;
+}
