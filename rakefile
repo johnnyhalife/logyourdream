@@ -1,10 +1,15 @@
-namespace :ci do
+require 'rake'
+require 'spec/rake/spectask'
+
+namespace :test do
+
   desc 'Measures test coverage'
-  task :coverage do
-    rm_f "./tmp/coverage"
-    rm_f "coverage.data"
-    rcov = "rcov --rails --aggregate coverage.data --text-summary -Ilib"
-    system("#{rcov} --no-html ./test/*.test.rb")
-    system("open coverage/index.html") if PLATFORM['darwin']
-  end
+  	Spec::Rake::SpecTask.new('coverage') do |t|
+  	  t.spec_files = FileList['./test/*.rb']
+  	  t.rcov = true
+  	  t.rcov_dir = './tmp'
+  	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
+  	  t.spec_opts = ['-cfn']
+  	end
+
 end
