@@ -1,7 +1,4 @@
-gem 'data_objects', '=0.9.11'
-require 'data_objects'
 require 'dm-core'
-require 'dm-constraints'
 
 configure do
   # Datamapper configuration
