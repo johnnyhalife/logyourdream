@@ -1,0 +1,10 @@
+require 'rake'
+require 'spec/rake/spectask'
+
+desc "Run all examples with RCov"
+Spec::Rake::SpecTask.new('examples_with_rcov') do |t|
+  t.spec_files = FileList['./test/*.rb']
+  t.rcov = true
+  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
+  t.spec_opts = ['-cfn']
+end
