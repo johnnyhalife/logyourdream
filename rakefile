@@ -7,7 +7,6 @@ namespace :test do
   	Spec::Rake::SpecTask.new('coverage') do |t|
   	  t.spec_files = FileList['./test/*.rb']
   	  t.rcov = true
-  	  t.rcov_dir = './tmp'
   	  t.rcov_opts = ['--text-report', '--exclude', ".gem,test,Library,#{ENV['GEM_HOME']}", '--sort', 'coverage']
   	  t.spec_opts = ['-cfn']
   	end
