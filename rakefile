@@ -1,9 +1,4 @@
 namespace :ci do
-  desc 'default task it;s doing nothing'
-  task :default do
-	p 'this is the default task'
-  end
-  
   desc 'Measures test coverage'
   task :coverage do
     rm_f "./tmp/coverage"
