@@ -4,7 +4,6 @@ require 'dm-timestamps'
 
 class User
    include DataMapper::Resource
-   include DataMapper::Constraints
    
    property :id, Integer, :serial => true 
    property :alias, String
@@ -14,7 +13,6 @@ end
 
 class Dream
    include DataMapper::Resource
-   include DataMapper::Constraints
    
    property :id, Integer, :serial => true 
    property :title, String
