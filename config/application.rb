@@ -1,4 +1,5 @@
 require 'dm-core'
+require 'do_postgres'
 require 'dm-constraints'
 
 configure do
